@@ -1,0 +1,159 @@
+.section {
+  position: relative;
+  max-width: 1184px;
+  padding: 40px 48px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 55px;
+  align-items: center;
+  border: 1px solid #d9e4ed;
+  border-radius: 20px;
+  background: #fff;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+}
+.copy > span {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #6c8fa6;
+}
+.copy h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  color: #244459;
+  margin: 17px 0;
+}
+.copy h2 em {
+  color: #597c94;
+  font-style: normal;
+}
+.copy p {
+  font-size: 0.875rem;
+  color: #7b8f9d;
+  line-height: 1.75;
+  max-width: 460px;
+  margin: 0;
+}
+.copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #276fa8;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding-top: 21px;
+}
+.copy a:hover {
+  color: #114773;
+}
+.visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-width: 0;
+}
+.connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  color: #6292b0;
+}
+.connection > span {
+  font-size: 0.4375rem;
+  letter-spacing: 0.1em;
+}
+.connection > i {
+  width: 34px;
+  border-top: 1px dashed #b6cedf;
+}
+.profile {
+  border: 1px solid #d0e1ed;
+  border-radius: 15px;
+  padding: 20px 17px;
+  width: 215px;
+  background: #f3f8fc;
+  transform: rotate(3deg);
+  box-shadow: 0 15px 30px #1e4b6a0a;
+}
+.profile > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.profile img {
+  object-fit: contain;
+}
+.profile > div > span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #355d79;
+}
+.profile small {
+  display: block;
+  font-size: 0.4375rem;
+  color: #849eaf;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.profile > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 9px;
+  margin-top: 7px;
+  border: 1px solid #dae7f0;
+  background: white;
+  border-radius: 7px;
+  font-size: 0.5625rem;
+  color: #6489a3;
+}
+@media (max-width: 1240px) {
+  .section {
+    margin: 0 28px;
+  }
+}
+@media (max-width: 800px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 35px;
+    gap: 35px;
+  }
+  .visual {
+    justify-content: flex-start;
+  }
+  .profile {
+    transform: rotate(2deg);
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    margin: 0 20px;
+    padding: 28px 22px;
+  }
+  .copy h2 {
+    font-size: 1.9rem;
+  }
+  .visual {
+    gap: 16px;
+  }
+  .connection > svg {
+    width: 31px;
+  }
+  .profile {
+    min-width: 0;
+    padding: 17px 12px;
+    width: 195px;
+  }
+  .connection > span {
+    font-size: 0.375rem;
+  }
+}

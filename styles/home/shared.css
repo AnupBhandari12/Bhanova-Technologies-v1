@@ -1,0 +1,113 @@
+/* Shared design tokens and controls for the company and product pages. */
+.home-page,
+.service-modal {
+  --ink: #0c2237;
+  --navy: #0b2135;
+  --navy2: #122e49;
+  --blue: #1969d8;
+  --cyan: #55cdd3;
+  --paper: #f7f9fc;
+  --muted: #5c7083;
+  --line: #dce5ee;
+  --white: #fff;
+}
+.home-page {
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f9fc;
+}
+:is(.home-page, .service-modal) .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 21px;
+  min-height: 48px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+:is(.home-page, .service-modal) .btn svg {
+  width: 18px;
+}
+:is(.home-page, .service-modal) .btn-primary {
+  background: #1969d8;
+  color: #fff;
+  box-shadow: 0 6px 16px #1969d81a;
+}
+:is(.home-page, .service-modal) .btn-primary:hover {
+  background: #1459b9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px #1969d826;
+}
+:is(.home-page, .service-modal) .btn-ghost {
+  color: #183954;
+  border-color: #d3dfeb;
+  background: #fff;
+}
+:is(.home-page, .service-modal) .btn-ghost:hover {
+  background: #edf4fb;
+  border-color: #b2c9e4;
+  transform: translateY(-2px);
+}
+.home-page .section {
+  max-width: 1240px;
+  margin: auto;
+  padding: 84px 28px;
+}
+.home-page .section-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 52px;
+  margin-bottom: 38px;
+}
+.home-page .kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: #1964c6;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.home-page .section-intro h2 {
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  margin: 16px 0 0;
+}
+.home-page .section-intro h2 em {
+  font-style: normal;
+  color: #1969d8;
+}
+.home-page .section-intro > p {
+  max-width: 365px;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.75;
+  margin: 0;
+}
+.home-page ::selection {
+  background: #bed7fa;
+  color: #0b2135;
+}
+@media (max-width: 800px) {
+  .home-page .section-intro {
+    display: block;
+  }
+  .home-page .section-intro > p {
+    max-width: 550px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .home-page .section {
+    padding: 62px 20px;
+  }
+}

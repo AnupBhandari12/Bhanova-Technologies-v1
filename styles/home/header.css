@@ -1,0 +1,121 @@
+/* Sticky company navigation; mobile menu behaviour lives in Header.jsx. */
+.home-page .header {
+  height: 82px;
+  padding: 0 max(28px, calc((100% - 1184px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #dce5eecc;
+  background: #f9fbfdee;
+  backdrop-filter: blur(16px);
+}
+.home-page .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.home-page .brand-logo-image {
+  display: block;
+  width: 188px;
+  height: auto;
+}
+.home-page .nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  color: #536b80;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.home-page .nav > a:not(.nav-button) {
+  position: relative;
+  padding: 12px 0;
+}
+.home-page .nav > a:not(.nav-button)::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #1969d8;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+.home-page .nav > a:not(.nav-button):hover {
+  color: #165cba;
+}
+.home-page .nav > a:not(.nav-button):hover::after {
+  transform: scaleX(1);
+}
+.home-page .nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #0b2135;
+  color: #fff;
+  padding: 13px 18px;
+  border-radius: 9px;
+  white-space: nowrap;
+  transition: background 180ms ease;
+}
+.home-page .nav-button:hover {
+  background: #194268;
+}
+.home-page .menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dce5ee;
+  border-radius: 9px;
+  padding: 10px;
+  color: #153c5e;
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .home-page .nav {
+    display: none;
+    position: absolute;
+    top: 73px;
+    left: 20px;
+    right: 20px;
+    max-height: calc(100dvh - 96px);
+    overflow: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    border: 1px solid #dce5ee;
+    background: #fff;
+    padding: 19px 22px;
+    border-radius: 13px;
+    box-shadow: 0 16px 30px #0c294c1f;
+  }
+  .home-page .nav.open {
+    display: flex;
+  }
+  .home-page .menu-button {
+    display: grid;
+    place-items: center;
+  }
+  .home-page .nav-button {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .home-page .header {
+    height: 72px;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .home-page .brand-logo-image {
+    width: 172px;
+  }
+  .home-page .nav {
+    top: 64px;
+  }
+}

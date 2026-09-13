@@ -1,0 +1,165 @@
+.canvas {
+  position: relative;
+  height: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  border-radius: 18px;
+  padding: 22px 14px 0;
+  background: #f8eee9;
+  color: #663d48;
+}
+.caption {
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.phone {
+  width: 168px;
+  padding: 10px 13px 20px;
+  border: 5px solid #28232a;
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  background: #fffaf6;
+  text-align: center;
+  box-shadow: 0 12px 28px #39242c25;
+  transform: rotate(-4deg);
+}
+.speaker {
+  height: 5px;
+  width: 38px;
+  margin: 0 auto 14px;
+  background: #2f2631;
+  border-radius: 10px;
+}
+.brand {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  margin: 0 auto 9px;
+  border-radius: 50%;
+  color: #85566b;
+  background: #f1e2e5;
+}
+.phone > strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+.phone > small {
+  display: block;
+  font-size: 0.5rem;
+  margin: 5px 0 14px;
+}
+.links {
+  display: grid;
+  gap: 6px;
+}
+.links span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 7px 5px;
+  border-radius: 6px;
+  background: #926076;
+  color: #fff;
+  font-size: 0.5rem;
+}
+.links span svg:last-child {
+  margin-left: auto;
+}
+.links span:nth-child(2) {
+  background: #f0e0e5;
+  color: #704557;
+}
+.links span:nth-child(3) {
+  background: #f0e0e5;
+  color: #704557;
+}
+.access {
+  position: absolute;
+  bottom: 18px;
+  right: 12px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  background: #fff;
+  border: 1px solid #dedbe0;
+  padding: 8px 10px;
+  border-radius: 9px;
+  box-shadow: 0 6px 14px #182d3214;
+}
+.tap {
+  background: #f9eedb;
+  color: #71491e;
+}
+.tap .phone {
+  transform: rotate(3deg);
+  background: #fffdf5;
+}
+.tap .brand {
+  background: #f5d9a8;
+  color: #854a20;
+}
+.tap .links span {
+  background: #965c29;
+  color: #fff;
+}
+.tap .links span:nth-child(2) {
+  background: #ebdbb0;
+  color: #514424;
+}
+.tap .links span:nth-child(3) {
+  background: #e7edde;
+  color: #39543d;
+}
+.pro {
+  background: radial-gradient(ellipse at top, #566147, #1c3024 70%);
+  color: #e0c897;
+}
+.pro .phone {
+  transform: rotate(-3deg);
+  background: #24392b;
+  color: #e9d8b2;
+  border-color: #090d11;
+}
+.pro .brand {
+  background: #353329;
+  color: #d9ba7e;
+}
+.pro .links span {
+  background: #c2a66e;
+  color: #1c2021;
+}
+.pro .links span:nth-child(2),
+.pro .links span:nth-child(3) {
+  background: #353531;
+  color: #eee1c6;
+}
+.pro .access {
+  background: #e4cca0;
+  border-color: #e4cca0;
+  color: #282c2c;
+}
+.qr {
+  background: #edf2e9;
+  color: #466146;
+}
+.qr .phone {
+  background: #fffdf5;
+}
+.qr .brand {
+  background: #e5eddb;
+  color: #516942;
+}
+.qr .links span {
+  background: #52774c;
+}
+.qr .links span:nth-child(2),
+.qr .links span:nth-child(3) {
+  background: #e6eedc;
+  color: #42603e;
+}

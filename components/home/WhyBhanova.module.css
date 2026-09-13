@@ -1,0 +1,121 @@
+.section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 100px;
+  max-width: 1240px;
+  padding: 92px 28px;
+  margin: auto;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+}
+.story h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  letter-spacing: -0.055em;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 17px 0 25px;
+  color: #17354a;
+}
+.story h2 em {
+  color: #497991;
+  font-style: normal;
+}
+.story > p {
+  color: #6b7f8d;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+.story > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #206baf;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.story > a:hover {
+  color: #124776;
+}
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 32px;
+  color: #476779;
+}
+.signature img {
+  object-fit: contain;
+}
+.signature > span {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+.signature small {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 5px;
+  color: #91a0a9;
+}
+.commitments {
+  display: grid;
+  gap: 0;
+  align-content: center;
+}
+.commitments article {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  padding: 26px 0;
+  border-bottom: 1px solid #dce6ed;
+}
+.commitments article:first-child {
+  padding-top: 0;
+}
+.number {
+  font-size: 0.6875rem;
+  color: #9db0bc;
+  padding-top: 3px;
+}
+.commitments svg {
+  color: #317fb7;
+  margin-bottom: 13px;
+}
+.commitments h3 {
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  color: #29495e;
+  margin: 0 0 9px;
+}
+.commitments p {
+  color: #6c8292;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .section {
+    gap: 45px;
+  }
+}
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+    padding: 64px 20px;
+  }
+  .story h2 {
+    font-size: 2.35rem;
+  }
+  .signature {
+    margin-top: 22px;
+  }
+}

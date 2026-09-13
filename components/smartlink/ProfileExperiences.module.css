@@ -1,0 +1,227 @@
+.experience {
+  margin: 0 24px;
+  padding: 28px 0 6px;
+}
+.label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+.experience h2 {
+  margin: 8px 0 20px;
+  font:
+    1.65rem/1.25 Georgia,
+    serif;
+  letter-spacing: -0.035em;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.tile {
+  min-width: 0;
+}
+.art {
+  position: relative;
+  height: 130px;
+  margin-bottom: 12px;
+  border-radius: 90px 90px 12px 12px;
+  display: grid;
+  place-items: center;
+  background: #f1e3db;
+  color: #995d55;
+  overflow: hidden;
+}
+.art::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid currentColor;
+  opacity: 0.2;
+  border-radius: 50%;
+  right: -20px;
+  bottom: -30px;
+}
+.art > svg {
+  width: 54px;
+  height: 54px;
+  stroke-width: 1;
+}
+.art > span {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font:
+    italic 0.85rem Georgia,
+    serif;
+}
+.tile:nth-child(2) .art {
+  background: #e7e3d7;
+  color: #73794a;
+}
+.tile strong {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.tile p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin: 7px 0;
+}
+.qr .art {
+  background: #e9e5d4;
+  color: #61704d;
+  border-radius: 90px 90px 12px 12px;
+}
+.tap .art {
+  background: #f5d5a1;
+  color: #8b4f26;
+  border-radius: 12px;
+}
+.tap .tile:nth-child(2) .art {
+  background: #dfe8dc;
+  color: #42644c;
+}
+.pro .art {
+  background: linear-gradient(145deg, #302b24, #1a1916);
+  color: #d1b980;
+  border: 1px solid #4c4130;
+  border-radius: 80px 80px 0 0;
+}
+.pro .tile:nth-child(2) .art {
+  background: linear-gradient(145deg, #242821, #171b17);
+  color: #bebba1;
+}
+.experience > button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: left;
+}
+.experience > button:hover {
+  opacity: 0.7;
+}
+.booking {
+  display: grid;
+  gap: 10px;
+}
+.booking label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #19303e;
+}
+.booking select {
+  min-width: 0;
+  width: 100%;
+  padding: 13px 12px;
+  background: #f6f8fa;
+  color: #142b3a;
+  border: 1px solid #c7d4dc;
+  border-radius: 10px;
+  font: inherit;
+  margin-bottom: 6px;
+}
+.booking p {
+  font-size: 0.875rem;
+  margin: 2px 0 10px;
+}
+.booking > button {
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  color: white;
+  background: #172b37;
+  font-weight: 700;
+}
+.confirmation {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #b7d6c8;
+  border-radius: 12px;
+  background: #eef7f1;
+  color: #204633;
+  padding: 18px;
+  margin-top: 8px;
+}
+.confirmation > span {
+  font-size: 0.9375rem;
+}
+.listIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  color: #905e50;
+  margin-bottom: 10px;
+}
+.gallery {
+  display: grid;
+  gap: 18px;
+}
+.gallery figure {
+  margin: 0;
+}
+.scene {
+  display: grid;
+  position: relative;
+  place-items: center;
+  height: 165px;
+  overflow: hidden;
+  border-radius: 14px;
+  color: #eee2bb;
+  background: #516d59;
+}
+.scene svg {
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  stroke-width: 1;
+}
+.scene > span {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #dbc79e33;
+  right: -20px;
+  top: -50px;
+}
+.mountains {
+  background: linear-gradient(145deg, #acc0bb, #355d53);
+}
+.room {
+  background: linear-gradient(145deg, #b89c7a, #5b4231);
+}
+.garden {
+  background: linear-gradient(145deg, #9fba88, #365b3b);
+}
+.gallery figcaption {
+  display: grid;
+  gap: 5px;
+  padding-top: 12px;
+}
+.gallery small {
+  color: #627467;
+  line-height: 1.5;
+  font-size: 0.8125rem;
+}
+@media (max-width: 480px) {
+  .experience {
+    margin: 0 18px;
+  }
+  .art {
+    height: 115px;
+  }
+}

@@ -1,29 +1,20 @@
-import "./globals.css";
-import "./premium.css";
+import { site } from "@/config/site";
+import { getSiteOrigin } from "@/lib/metadata";
+import "@/styles/globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://bhanova-technologies.anupbhandari192.chatgpt.site"),
+  metadataBase: getSiteOrigin(),
   title: {
-    default: "Bhanova Technologies | Websites, Software & AI Solutions in Nepal",
-    template: "%s | Bhanova Technologies",
+    default: `${site.name} | Websites, Software & AI Solutions in Nepal`,
+    template: `%s | ${site.name}`,
   },
-  description:
-    "Bhanova Technologies builds professional websites, custom software and practical AI automation solutions for education institutes and growing businesses in Nepal.",
-  keywords: [
-    "web development Nepal",
-    "software company Nepal",
-    "AI automation Nepal",
-    "business website Nepal",
-    "custom software Nepal",
-  ],
-  alternates: { canonical: "/" },
+  description: site.description,
   openGraph: {
     type: "website",
     locale: "en_NP",
-    siteName: "Bhanova Technologies",
-    title: "Bhanova Technologies | Innovating From Nepal",
-    description:
-      "Professional websites, custom software and practical AI solutions for growing organisations.",
+    siteName: site.name,
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
   },
   robots: { index: true, follow: true },
   icons: { icon: "/bhanova-mark.png", shortcut: "/bhanova-mark.png" },
@@ -32,7 +23,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,179 @@
+.visual {
+  height: 440px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.orbit {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #31516b;
+  border-radius: 50%;
+  background: radial-gradient(circle, #20456277, transparent 70%);
+}
+.orbit::after {
+  content: "";
+  position: absolute;
+  inset: 26px;
+  border: 1px dashed #31516b;
+  border-radius: 50%;
+}
+.stand {
+  position: relative;
+  z-index: 2;
+  width: 224px;
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-align: center;
+  color: #0d263f;
+  background: linear-gradient(120deg, #fff, #eef3f8);
+  box-shadow:
+    14px 24px 45px #03101b77,
+    inset -5px 0 0 #dce5ed;
+  transform: rotate(-3deg);
+}
+.brand {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.brand span {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+.brand small {
+  color: #1769cf;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  margin-top: 3px;
+}
+.stand p {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: #657a8b;
+  margin-top: 20px;
+}
+.qr {
+  background: white;
+  padding: 6px;
+  border-radius: 6px;
+  width: max-content;
+  margin: 12px auto 16px;
+}
+.qr svg {
+  display: block;
+}
+.stand > strong {
+  display: block;
+  font-size: 1rem;
+}
+.stand > small {
+  display: block;
+  color: #667c8d;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
+.icons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.icons svg {
+  width: 15px;
+  height: 15px;
+  color: #2273d7;
+}
+.base {
+  width: 284px;
+  height: 27px;
+  background: linear-gradient(#dbe7ef, #91aabf);
+  position: absolute;
+  bottom: 38px;
+  border-radius: 50%;
+  box-shadow: 0 16px 30px #03101b88;
+  transform: rotate(-3deg);
+}
+.review,
+.location,
+.contact {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #19416a;
+  padding: 12px 15px;
+  background: #fff;
+  box-shadow: 0 12px 26px #03101b30;
+  border: 1px solid #e3ecf3;
+  border-radius: 11px;
+}
+.review span,
+.location span,
+.contact span {
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+.review small,
+.location small,
+.contact small {
+  display: block;
+  font-weight: 400;
+  color: #6a7e8f;
+  font-size: 0.67rem;
+  margin-top: 4px;
+}
+.review {
+  top: 25px;
+  right: 0;
+}
+.location {
+  top: 176px;
+  left: 0;
+}
+.contact {
+  bottom: 28px;
+  right: 0;
+}
+@media (max-width: 1100px) and (min-width: 851px) {
+  .location {
+    left: -15px;
+    top: 222px;
+  }
+}
+@media (max-width: 480px) {
+  .visual {
+    height: 415px;
+  }
+  .orbit {
+    width: 265px;
+    height: 265px;
+  }
+  .stand {
+    width: 212px;
+  }
+  .review {
+    top: 8px;
+    right: 0;
+  }
+  .location {
+    left: 0;
+    top: 216px;
+    padding: 10px;
+  }
+  .contact {
+    right: 0;
+    bottom: 0;
+  }
+  .base {
+    bottom: 22px;
+    width: 240px;
+  }
+}

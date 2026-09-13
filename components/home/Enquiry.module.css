@@ -1,0 +1,239 @@
+.section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 80px;
+  padding: 75px 65px;
+  max-width: 1184px;
+  margin: 0 auto 65px;
+  border-radius: 24px;
+  background: #0e2c43;
+  color: white;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+}
+.eyebrow {
+  color: #88b3cb;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+.intro h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.055em;
+  margin: 20px 0;
+}
+.intro h2 em {
+  color: #9dcced;
+  font-style: normal;
+}
+.intro > p {
+  color: #9bb4c5;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 380px;
+}
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 1px solid #37586d;
+  background: #173a53;
+}
+.whatsapp > span {
+  font-size: 0.625rem;
+  color: #a7bdcc;
+}
+.whatsapp strong {
+  display: block;
+  color: #e1edf6;
+  font-size: 0.8125rem;
+  margin-top: 5px;
+}
+.whatsapp > svg {
+  color: #9ac7de;
+}
+.whatsapp > svg:last-child {
+  margin-left: auto;
+}
+.whatsapp:hover {
+  background: #20475f;
+}
+.email {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.8125rem;
+  color: #b4cfdf;
+  margin-top: 22px;
+  overflow-wrap: anywhere;
+}
+.email:hover {
+  color: white;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 24px;
+}
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9bb9ce;
+  font-size: 0.625rem;
+}
+.socials a:hover {
+  color: white;
+}
+.socials svg {
+  width: 14px;
+}
+.note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.625rem;
+  color: #7498b0;
+  margin-top: 30px;
+}
+.form {
+  background: white;
+  color: #23445c;
+  padding: 28px;
+  border-radius: 16px;
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  box-shadow: 0 14px 35px #05192533;
+}
+.formHeading > span {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  color: #7294ad;
+}
+.formHeading h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  margin: 8px 0 1px;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.form label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.form label > span {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #4c6d84;
+}
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d9e4ec;
+  border-radius: 8px;
+  padding: 12px 11px;
+  background: #f9fbfd;
+  font-size: 0.8125rem;
+  color: #345871;
+  line-height: 1.5;
+}
+.form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #93a7b6;
+}
+.form select {
+  padding-right: 23px;
+}
+.form > button {
+  width: 100%;
+  font-size: 0.75rem !important;
+  gap: 9px;
+}
+.form > small {
+  color: #8a9ead;
+  font-size: 0.625rem;
+  text-align: center;
+  line-height: 1.6;
+}
+.feedback {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #527187;
+}
+.feedback a {
+  color: #1466bc;
+  text-decoration: underline;
+}
+@media (max-width: 1240px) {
+  .section {
+    margin-left: 28px;
+    margin-right: 28px;
+    gap: 40px;
+    padding: 55px 40px;
+  }
+}
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+  .intro > p {
+    max-width: 560px;
+  }
+  .whatsapp {
+    max-width: 380px;
+  }
+  .note {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    margin: 0 14px 40px;
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+  .intro h2 {
+    font-size: 2.4rem;
+  }
+  .form {
+    padding: 22px 16px;
+  }
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .email {
+    font-size: 0.75rem;
+  }
+  .form > button {
+    flex-wrap: wrap;
+    font-size: 0.6875rem !important;
+  }
+  .note {
+    line-height: 1.6;
+  }
+}

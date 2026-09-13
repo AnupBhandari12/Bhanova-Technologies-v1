@@ -1,64 +1,35 @@
-"use client";
+import { SiteHeader } from "@/components/layout/Header";
+import { SiteFooter } from "@/components/layout/Footer";
+import { HeroSection } from "@/components/home/Hero";
+import { ServicesSection } from "@/components/home/Services";
+import { SmartLinkSection } from "@/components/home/SmartLink";
+import { WorkSection } from "@/components/home/Portfolio";
+import { ProcessSection } from "@/components/home/Process";
+import { WhyBhanovaSection } from "@/components/home/WhyBhanova";
+import { EnquirySection } from "@/components/home/Enquiry";
+import { FloatingContact } from "@/components/layout/FloatingContact";
+import { FaqSection } from "@/components/shared/FaqSection";
+import { COMPANY_FAQS } from "@/data/faqs";
+import "@/styles/home/index.css";
 
-import { useState } from "react";
-import { SiteHeader } from "./components/home/site-header";
-import {
-  AboutSection,
-  ContactSection,
-  EnquirySection,
-  HeroSection,
-  ProcessSection,
-  ServicesSection,
-  ServiceTicker,
-  SiteFooter,
-  SmartLinkSection,
-  TrustSection,
-  WorkSection,
-} from "./components/home/sections";
-
-function createWhatsAppMessage(form) {
-  return [
-    "Hello Bhanova Technologies, I would like to discuss a project.",
-    "",
-    `Name: ${form.get("name")}`,
-    `Phone / Email: ${form.get("contact")}`,
-    `Service: ${form.get("service")}`,
-    `Estimated budget: ${form.get("budget")}`,
-    `Project details: ${form.get("details")}`,
-  ].join("\n");
-}
+export const metadata = { alternates: { canonical: "/" } };
 
 export default function HomePage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  function handleEnquirySubmit(event) {
-    event.preventDefault();
-
-    const form = new FormData(event.currentTarget);
-    const message = createWhatsAppMessage(form);
-    const whatsappUrl = `https://wa.me/9779702432556?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-  }
-
   return (
-    <main>
-      <SiteHeader
-        menuOpen={menuOpen}
-        onMenuToggle={() => setMenuOpen((isOpen) => !isOpen)}
-        onNavigate={() => setMenuOpen(false)}
-      />
-      <HeroSection />
-      <ServiceTicker />
-      <ServicesSection />
-      <SmartLinkSection />
-      <TrustSection />
-      <WorkSection />
-      <ProcessSection />
-      <AboutSection />
-      <EnquirySection onSubmit={handleEnquirySubmit} />
-      <ContactSection />
+    <div className="home-page">
+      <SiteHeader />
+      <main id="main-content">
+        <HeroSection />
+        <ServicesSection />
+        <WorkSection />
+        <WhyBhanovaSection />
+        <ProcessSection />
+        <SmartLinkSection />
+        <FaqSection items={COMPANY_FAQS} />
+        <EnquirySection />
+      </main>
       <SiteFooter />
-    </main>
+      <FloatingContact />
+    </div>
   );
 }

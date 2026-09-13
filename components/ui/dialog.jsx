@@ -2,6 +2,7 @@
 
 import { Dialog as DialogPrimitive } from "radix-ui";
 import { X } from "lucide-react";
+import styles from "./dialog.module.css";
 
 export function Dialog(props) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />;
@@ -14,17 +15,14 @@ export function DialogTrigger(props) {
 export function DialogContent({ className = "", children, ...props }) {
   return (
     <DialogPrimitive.Portal>
-      <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/50" />
+      <DialogPrimitive.Overlay className={styles.overlay} />
       <DialogPrimitive.Content
         data-slot="dialog-content"
-        className={`fixed left-1/2 top-1/2 z-50 grid -translate-x-1/2 -translate-y-1/2 gap-4 bg-white outline-none ${className}`}
+        className={`${styles.content} ${className}`}
         {...props}
       >
         {children}
-        <DialogPrimitive.Close
-          className="absolute right-4 top-4 rounded-md p-1 opacity-70 transition hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          aria-label="Close"
-        >
+        <DialogPrimitive.Close className={styles.close} aria-label="Close">
           <X size={18} />
         </DialogPrimitive.Close>
       </DialogPrimitive.Content>
@@ -38,11 +36,7 @@ export function DialogHeader({ className = "", ...props }) {
 
 export function DialogTitle({ className = "", ...props }) {
   return (
-    <DialogPrimitive.Title
-      data-slot="dialog-title"
-      className={className}
-      {...props}
-    />
+    <DialogPrimitive.Title data-slot="dialog-title" className={className} {...props} />
   );
 }
 

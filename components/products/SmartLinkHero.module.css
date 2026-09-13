@@ -1,0 +1,147 @@
+.section {
+  background: #0b2135;
+  color: #fff;
+  padding: 68px 28px 58px;
+}
+.inner {
+  max-width: 1184px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.copy {
+  min-width: 0;
+}
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a0c7ff;
+}
+.copy h1 {
+  font-size: clamp(3.2rem, 5.3vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin: 24px 0;
+}
+.copy h1 em {
+  font-style: normal;
+  color: #83b7ff;
+}
+.copy > p {
+  color: #bacbda;
+  font-size: 1.06rem;
+  line-height: 1.8;
+  max-width: 490px;
+}
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: baseline;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #bbcddc;
+}
+.price strong {
+  font-size: 1.25rem;
+  color: white;
+}
+.price > span {
+  display: block;
+  flex-basis: 100%;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+.actions {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.demoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.88rem;
+  padding: 12px 0;
+  color: #dcecff;
+}
+.demoLink:hover {
+  color: #8dc2ff;
+}
+.copy ul {
+  padding: 0;
+  margin: 27px 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #b6cddd;
+  font-size: 0.86rem;
+}
+.copy li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.copy li svg {
+  color: #7bdcca;
+}
+.copy .byline {
+  font-size: 0.82rem;
+  margin-top: 30px;
+}
+.byline a {
+  color: #cae1ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.visual {
+  min-width: 0;
+}
+.visual > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  text-align: center;
+  color: #b4cbe0;
+  font-size: 0.8rem;
+  padding: 16px;
+}
+@media (max-width: 850px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .copy > p {
+    max-width: 560px;
+  }
+  .visual {
+    max-width: 490px;
+    width: 100%;
+    justify-self: center;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 20px 28px;
+  }
+  .copy h1 {
+    font-size: clamp(2.6rem, 11.8vw, 3.25rem);
+  }
+  .actions {
+    gap: 8px;
+  }
+  .copy > p {
+    font-size: 1rem;
+  }
+}

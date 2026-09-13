@@ -1,0 +1,166 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 54px;
+  max-width: 1240px;
+  padding: 78px 28px 30px;
+  margin: auto;
+}
+.copy {
+  min-width: 0;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #42708a;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.6;
+}
+.eyebrow i {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #157df0;
+  box-shadow: 0 0 0 5px #e5f0fd;
+}
+.copy h1 {
+  font-size: clamp(3rem, 4.8vw, 4.15rem);
+  line-height: 1.07;
+  letter-spacing: -0.06em;
+  font-weight: 650;
+  margin: 25px 0 25px;
+  color: #10283c;
+}
+.copy h1 em {
+  color: #196de1;
+  font-style: normal;
+}
+.copy > p {
+  color: #455e72;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 465px;
+  margin: 0;
+}
+.copy .audience {
+  color: #70818e;
+  font-size: 0.9375rem;
+  margin-top: 14px;
+  line-height: 1.7;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 22px;
+  align-items: center;
+  margin: 28px 0;
+}
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #294f6d;
+  min-height: 44px;
+}
+.secondary:hover {
+  color: #156bd9;
+}
+.reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  color: #6c7f8b;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+.reassurance span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.reassurance svg {
+  width: 13px;
+  height: 13px;
+  color: #227da2;
+}
+.bottomLine {
+  grid-column: 1 / -1;
+  border-top: 1px solid #dfe7ed;
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #7b8c97;
+}
+.bottomLine > span {
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+.bottomLine a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  color: #486b82;
+}
+@media (max-width: 1000px) {
+  .hero {
+    gap: 30px;
+    padding-top: 55px;
+  }
+  .copy h1 {
+    font-size: 3.35rem;
+  }
+  .copy > p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    padding-top: 45px;
+  }
+  .copy h1 {
+    font-size: clamp(3.2rem, 8vw, 4.5rem);
+  }
+  .copy > p {
+    max-width: 560px;
+  }
+  .bottomLine {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding: 38px 20px 20px;
+  }
+  .copy h1 {
+    font-size: clamp(2.75rem, 11vw, 3.8rem);
+  }
+  .eyebrow {
+    font-size: 0.6rem;
+  }
+  .copy .audience {
+    font-size: 0.875rem;
+  }
+  .reassurance {
+    gap: 10px;
+    font-size: 0.625rem;
+  }
+  .actions {
+    gap: 12px;
+  }
+  .bottomLine {
+    gap: 12px;
+  }
+}

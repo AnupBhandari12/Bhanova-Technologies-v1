@@ -1,0 +1,401 @@
+.showcase {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #d8e4ed;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #eef4f9, #f8fbfd);
+  box-shadow: 0 25px 70px #122b460b;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #52738d;
+  margin-bottom: 18px;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.previewLabel {
+  padding: 6px 8px;
+  background: white;
+  border: 1px solid #d5e3ec;
+  border-radius: 20px;
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 12px 5px;
+  background: transparent;
+  font-size: 0.6875rem;
+  color: #657c8f;
+}
+.tabs button svg {
+  width: 14px;
+  height: 14px;
+}
+.tabs button[aria-pressed="true"] {
+  background: #102c45;
+  color: white;
+  box-shadow: 0 5px 10px #102c4520;
+}
+.tabs button:hover:not([aria-pressed="true"]) {
+  background: #e3edf5;
+}
+.browser {
+  border: 1px solid #cfdce7;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 13px 25px #17415d08;
+}
+.browserTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 11px 12px;
+  background: #fff;
+  border-bottom: 1px solid #e5edf2;
+  color: #8296a5;
+  font-size: 0.5rem;
+}
+.browserTop > div {
+  display: flex;
+  gap: 4px;
+}
+.browserTop i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b8c8d3;
+}
+.browserTop > span:last-child {
+  letter-spacing: 0.1em;
+  font-size: 0.4375rem;
+}
+.preview {
+  min-height: 283px;
+}
+.website {
+  background: #eff5f8;
+}
+.schoolNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 14px 17px;
+  background: #fff;
+  color: #174665;
+  font-size: 0.6875rem;
+}
+.schoolNav > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+.schoolNav > small {
+  font-size: 0.4375rem;
+  color: #7890a1;
+}
+.schoolBody {
+  padding: 23px 22px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.schoolBody::after {
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 170px;
+  right: -40px;
+  bottom: -30px;
+  border-radius: 90px 90px 0 0;
+  background: linear-gradient(135deg, #b8ddec, #82b6cd);
+  transform: rotate(25deg);
+  opacity: 0.55;
+}
+.schoolBody > span:first-child {
+  display: block;
+  font-size: 0.4375rem;
+  letter-spacing: 0.14em;
+  color: #3a83a4;
+  font-weight: 700;
+}
+.schoolBody > strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+  color: #204158;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.schoolBody > p {
+  position: relative;
+  z-index: 1;
+  font-size: 0.5625rem;
+  line-height: 1.5;
+  max-width: 220px;
+  color: #738d9f;
+  margin: 0 0 12px;
+}
+.sampleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #1c6f9c;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 0.5rem;
+}
+.schoolBlocks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 8px 16px 16px;
+}
+.schoolBlocks > span {
+  min-width: 0;
+  border-radius: 7px;
+  padding: 9px 7px;
+  background: #fff;
+  color: #6186a0;
+  font-size: 0.4375rem;
+}
+.schoolBlocks b {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #345d78;
+}
+.software,
+.ai {
+  min-height: 283px;
+  padding: 16px;
+  background: #f4f8fc;
+}
+.appNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #28526f;
+  font-size: 0.75rem;
+}
+.appNav > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.appNav small {
+  font-size: 0.5rem;
+  color: #8d9fad;
+}
+.appHeading {
+  display: grid;
+  gap: 6px;
+  margin: 22px 0 17px;
+}
+.appHeading strong {
+  font-size: 1rem;
+  color: #244459;
+  letter-spacing: -0.03em;
+}
+.appHeading small {
+  font-size: 0.5625rem;
+  color: #8699a9;
+}
+.workCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.workCards > span {
+  display: grid;
+  gap: 7px;
+  background: white;
+  border: 1px solid #dbe5ed;
+  border-radius: 8px;
+  padding: 10px;
+}
+.workCards small {
+  font-size: 0.4375rem;
+  color: #7b91a2;
+}
+.workCards b {
+  font-size: 1.2rem;
+  color: #1b689e;
+  font-weight: 500;
+}
+.workRows {
+  margin-top: 16px;
+}
+.workRows > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e8ef;
+  font-size: 0.5625rem;
+  color: #527084;
+}
+.workRows span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.workRows small {
+  font-size: 0.4375rem;
+  border-radius: 4px;
+  padding: 3px 5px;
+  background: #e5eef7;
+  color: #5680a4;
+}
+.chatQuestion {
+  margin: 23px 0 15px 35px;
+  border-radius: 9px 9px 0 9px;
+  padding: 12px;
+  background: #1a65c0;
+  color: white;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+}
+.chatAnswer {
+  margin-right: 15px;
+  background: white;
+  border: 1px solid #dbe4ee;
+  padding: 15px;
+  border-radius: 10px;
+}
+.chatAnswer > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.625rem;
+  color: #276d9f;
+  font-weight: 600;
+}
+.chatAnswer p {
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  color: #6a7e90;
+  margin: 10px 0;
+}
+.chatAnswer small {
+  font-size: 0.4375rem;
+  color: #8699a8;
+}
+.chatChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+}
+.chatChips > span {
+  font-size: 0.4375rem;
+  border: 1px solid #d1e0ed;
+  color: #6e8da4;
+  border-radius: 5px;
+  padding: 5px;
+}
+.caption {
+  padding: 23px 3px 2px;
+}
+.caption > span {
+  font-size: 0.5625rem;
+  letter-spacing: 0.12em;
+  color: #8299aa;
+  font-weight: 700;
+}
+.caption h2 {
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+  color: #1d3c55;
+  margin: 8px 0;
+  font-weight: 600;
+}
+.caption p {
+  font-size: 0.8125rem;
+  color: #6f879a;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 370px;
+}
+.caption a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: #196ece;
+  font-weight: 700;
+  padding-top: 19px;
+}
+.caption a:hover {
+  color: #11497f;
+}
+@media (max-width: 480px) {
+  .showcase {
+    padding: 15px;
+    border-radius: 18px;
+  }
+  .tabs button {
+    font-size: 0.5625rem;
+    gap: 4px;
+    padding: 11px 4px;
+  }
+  .tabs button svg {
+    width: 12px;
+  }
+  .schoolNav {
+    padding: 12px;
+  }
+  .schoolNav > small {
+    display: none;
+  }
+  .schoolBody {
+    padding: 22px 15px 15px;
+  }
+  .schoolBody > strong {
+    font-size: 1.45rem;
+  }
+  .schoolBlocks {
+    padding: 8px 11px 13px;
+    gap: 5px;
+  }
+  .caption h2 {
+    font-size: 1.3rem;
+  }
+  .heading {
+    font-size: 0.5rem;
+  }
+  .previewLabel {
+    font-size: 0.5rem;
+  }
+  .software,
+  .ai {
+    padding: 13px;
+  }
+}
